@@ -16,7 +16,7 @@ public class OrderServiceTest {
         long memberId = 1L;
         Member member = new Member(memberId, "오승민", Grade.VIP);
         memberService.join(member);
-
+    // 주문 객체 생성
         Order order = orderService.createOrder(memberId,"컵라면",10000);
         Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
     }
